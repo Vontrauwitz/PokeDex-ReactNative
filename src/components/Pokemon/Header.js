@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
   id: {
     color: "#fff",
-    fontWeight: "bold"
+    fontWeight: "bold",
 
   },
 
@@ -64,7 +64,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    top: 30
+    top: 30,
+
+
   },
   image: {
     width: 250,
