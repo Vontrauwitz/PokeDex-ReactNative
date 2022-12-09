@@ -1,12 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image, TouchableWithoutFeedback } from 'react-native'
-import getcolorByPokemonType from '../utils/GetColorByPokemonType';
+import getColorByPokemonType from '../utils/GetColorByPokemonType';
 
 export default function PokemonCard(props) {
   const { pokemon } = props;
+  const pokemonColor = getColorByPokemonType(pokemon.type);
 
 
-  const bgStyles = { backgroundColor: "#f0f", ...styles.bgStyles }
+  const bgStyles = { backgroundColor: pokemonColor, ...styles.bgStyles }
 
   const goToPokemon = () => {
     console.log(`Vamos al pokemon: ${pokemon.name}}`);
@@ -55,6 +56,7 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: 'bold',
     paddingTop: 10,
+    textTransform: 'capitalize',
 
   },
   image: {
