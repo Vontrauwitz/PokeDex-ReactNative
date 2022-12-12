@@ -30,7 +30,7 @@ export default function LoginForm() {
   return (
 
     <View>
-      <Text style={styles.title}>Log-In</Text>
+      <Text style={styles.title}></Text>
       <TextInput
         placeholder='UserName'
         style={styles.input}
