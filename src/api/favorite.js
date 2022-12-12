@@ -22,11 +22,11 @@ export async function addPokemonFavoriteApi(id) {
 }
 
 
-export async function isPokemonFavoriteApi(id) {
-  try {
-    const response = await getPokemonsFavoriteApi();
-    return includes(response, id)
-  } catch (error) {
-    throw error
-  }
-}
+// export async function isPokemonFavoriteApi(id) {
+//   try {
+//     const response = await getPokemonsFavoriteApi();
+//     return includes(response, id)
+//   } catch (error) {
+//     throw error
+//   }
+// }

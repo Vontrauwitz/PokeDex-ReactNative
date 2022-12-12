@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Icon from 'react-native-vector-icons/FontAwesome5';
-// import { addPokemonFavoriteApi, isPokemonFavoriteApi } from '../../api/favorite';
+import { addPokemonFavoriteApi } from '../../api/favorite';
 
 export default function Favorite(props) {
   const { id } = props;
@@ -21,14 +21,15 @@ export default function Favorite(props) {
 
   const addFavorite = async () => {
     console.log('añadir a favoritos', id);
-    // await addPokemonFavoriteApi(id)
+    await addPokemonFavoriteApi(id)
     // };
     // const removeFavorite = () => {
     //   console.log("Eliminar de favoritos");
   };
 
-  return (
 
+
+  return (
     <Icon
       name="heart"
       color="#fff"
@@ -38,5 +39,6 @@ export default function Favorite(props) {
         marginRight: 20
       }}
     />
+
   );
 }
