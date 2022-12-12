@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, Text, TextInput, Button, Keyboard, } from 'react-native'
+import { StyleSheet, View, Text, TextInput, Button, Keyboard, Image } from 'react-native'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { userDetails, user } from '../../utils/userDB';
@@ -30,7 +30,11 @@ export default function LoginForm() {
   return (
 
     <View>
-      <Text style={styles.title}></Text>
+      {/* <Text style={styles.title}>Login</Text> */}
+      <View style={styles.image}>
+        <Image source={require('../../assets/Loginpkm28.png')} />
+
+      </View>
       <TextInput
         placeholder='UserName'
         style={styles.input}
@@ -78,6 +82,12 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontWeight: "bold",
     marginTop: 50,
+    marginBottom: 15,
+  },
+  image: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginTop: 20,
     marginBottom: 15,
   },
   input: {
