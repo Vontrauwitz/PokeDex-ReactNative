@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useCallback } from 'react'
 import { Text } from 'react-native'
-import { useFocusEffect } from '@react-navigation/core'
+import { useFocusEffect } from '@react-navigation/native'
 import { getPokemonsFavoriteApi } from '../api/favorite'
 import { getPokemonDetailsApi } from '../api/Pokemon'
 import useAuth from '../hooks/useAuth'
@@ -16,7 +16,7 @@ export default function Favorites() {
       if (auth) {
         (async () => {
           const response = await getPokemonsFavoriteApi();
-
+          // console.log(response);
           const pokemonsArray = [];
           for await (const id of response) {
 
@@ -37,13 +37,10 @@ export default function Favorites() {
   )
 
 
-
-
-
-
   return !auth ? (
     <Text>User not Logged</Text>
   ) : (
+    // <PokemonList pokemons={pokemons} />
     <PokemonList pokemons={pokemons} />
   );
 }
