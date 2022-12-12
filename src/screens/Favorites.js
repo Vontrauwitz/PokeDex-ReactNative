@@ -11,6 +11,8 @@ export default function Favorites() {
     console.log(response);
   }
 
+
+
   return (
     <SafeAreaView>
       <Text>Favorites</Text>
