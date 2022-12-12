@@ -7,7 +7,6 @@ import { BorderlessButton } from 'react-native-gesture-handler';
 export default function Header(props) {
   const { name, id, image, type } = props;
   const color = GetColorByPokemonType(type)
-  console.log(image);
 
   const bgStyle = [{ backgroundColor: color, ...styles.bg }]
 
